@@ -39,25 +39,26 @@
     Cliquer sur ce lien pour retourner sur la page d'accueil
           </a>
        </body>
+	<p></p>
+<div class="btn-group btn-group-justified">
+  <div class="btn-group">
+    <button type="Info" class="btn btn-primary btn-lg">Info<a href ="https://bitcoin.mubiz.com/info"> WS/Info </a></button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-danger btn-lg">Blocks<a href="http://bitcoin.mubiz.com/blocks">WS/Blocks</a></button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-success btn-lg">Adresse<a href="http://bitcoin.mubiz.com/address/17LHaecYMc9682FSG911f2Vk574NmUKUWR/">Adresse</a></button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-info btn-lg">Mining<a href ="https://bitcoin.mubiz.com/mininginfo/"> WS/Mining </a></button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-warning btn-lg">Peer<a href ="https://bitcoin.mubiz.com/peerinfo"> WS/Peer </a></button>
+  </div>
+</div>	
 	
-	var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myObj = this.responseText;
-        var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
-        document.getElementById("demo").innerHTML = jsonPretty;
-    }
-};
-xmlhttp.open("GET", "https://api.blockcypher.com/v1/btc/main", true);
-xmlhttp.send();
-	
-	<div class="row">
-	<div class="col-lg-12 col-xs-6">
-    	<pre>
-        	<code id="demo" class="json kljs"></code>
-    	</pre>
-	</div>
-</div>
+
 </html>
 
 
