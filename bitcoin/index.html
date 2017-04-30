@@ -12,83 +12,17 @@
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 	  <script src="https://maxdheilly.github.io/js/script.js"></script>
 	      
-	  <script>
-		  var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myObj = this.responseText;
-        var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
-        document.getElementById("demo").innerHTML = jsonPretty;
-    }
-};
-xmlhttp.open("GET", "https://api.blockcypher.com/v1/btc/main", true);
-xmlhttp.send();
-
-function homePageLoading() {
-    url = 'apiUrl';
-    elementID = 'idDeVotreElementHtml';
-    fonctionRequeteApi(url, elementID);
-    
-    var isAddress = /^[0-9a-zA-Z]{34}$/.test(data);
-    
-    function output(inp) {
-    document.body.appendChild(document.createElement('pre')).innerHTML = inp;
-}
-
-function syntaxHighlight(json) {
-    json = json.replace(/&/g, '&').replace(//g, '>');
-    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-        var cls = 'number';
-        if (/^"/.test(match)) {
-            if (/:$/.test(match)) {
-                cls = 'key';
-            } else {
-                cls = 'string';
-            }
-        } else if (/true|false/.test(match)) {
-            cls = 'boolean';
-        } else if (/null/.test(match)) {
-            cls = 'null';
-        }
-        return '<span class="' + cls + '">' + match + '</span>';
-    });
-}
-
-output(str);
-output(syntaxHighlight(str));
-    
-    Block -> Transactions
-Transaction -> Block
-Transaction -> Address
-Address -> Transaction
-    
-    data = `<a href="javascript:appelFonction('${data}')">"${data}"</a>`
-    
-}
-	      </script>
 
       </head>
       <body>
-          <h1>Page d'informations sur le Bitcoin</h1>
-          <h2>Vous etes sur la page d'accueil</h2>
-	      <h3>Bienvenue</h3>
+          <h1>Bienvenue sur la page d'informations sur les Bitcoin</h1>
+          <h2>Ici vous trouverez des informations sur la blockchain </h2>
+	  
           <a href="https://maxdheilly.github.io/" title ="mon site" >
-    retour accueil <img src="http://fr.seaicons.com/wp-content/uploads/2016/06/Fleche-gauche-bleue-icon.png" />
-              
-</a>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="../custom.js"></script>
+    Cliquer sur ce lien pour retourner sur la page d'accueil
+          </a>
+
        </body>
-	
-	<div class="row">
-	<div class="col-lg-12 col-xs-6">
-    	<pre>
-        	<code id="demo" class="js/script.js"></code>
-    	</pre>
-	</div>
-</div>
-	<script type="text/javascript">homePageLoading();</script>
 </html>
 
 
